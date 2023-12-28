@@ -1,23 +1,24 @@
-import logo from './logo.svg';
+
 import './App.css';
 
 function App() {
+  const onclick = ()=>{
+    console.log("Nghia");
+  }
+  let number = 0;
+  const onchange = () =>{
+    number++;
+    console.log(number);
+  }
+  const n = "Nghia";
+  const onchange1 = (number) =>{
+    console.log(number);
+  }
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <button onClick={onclick}>Nhan me</button>
+      <input onChange={onchange}></input>
+      <button onClick={()=> {onchange1(n)}}>giam</button>
     </div>
   );
 }
